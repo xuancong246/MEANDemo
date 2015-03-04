@@ -10,7 +10,6 @@
 
     init();
     function init() {
-      console.log('congtest:' + systemCfg.standardDateFormat);
       var tempCourses = vm.model.courses = mvCachedCoursesSvc.getCoursesFromCache();
       if (tempCourses === undefined) {
         if (mvCachedCoursesSvc.getInitialDataStatus() === 'none') {
