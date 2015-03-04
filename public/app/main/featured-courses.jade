@@ -1,0 +1,5 @@
+.panel.panel-primary
+  .panel-heading.text-center Featured Courses
+  .panel-body
+    .row(ng-repeat="course in vm.model.courses | filter:{featured:true}")
+      .col-md-9 {{ course.title }}

@@ -1,0 +1,22 @@
+.container.top-padding-med
+  .pull-right
+    form.form-inline
+      .form-group
+        input.form-control(ng-model="vm.model.searchText", placeholder="Filter")
+      .form-group.main-left-med
+        select.form-control(ng-model="vm.model.sortOrder", ng-options="item.value as item.text for item in vm.model.sortOptions")
+  table.table.table-hover.table-striped.table-condensed
+    thead
+      tr
+        th Title
+        th Publish Date
+        th Featured
+    tbody
+      tr(ng-repeat="course in vm.model.courses | orderBy:vm.model.sortOrder |filter:vm.model.searchText")
+        td
+          a(href="/courses/{{course._id}}") {{ course.title }}
+        td {{ course.published | standardDate }}
+        td {{ course.featured | stickCross }}
+          
+  div.pull-right
+    button.btn(ng-csv="vm.exportCsv()", filename="courses.csv", csv-header="['Title','Published Date', 'Featured']") Export CSV
