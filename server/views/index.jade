@@ -9,9 +9,18 @@ block main-content
 			.navbar-collapse.collapse
 				ul.nav.navbar-nav
 					li
-						a(href="/") Home
-					li
 						a(href="/courses") Courses
+					li.dropdown
+						a.dropdown-toggle(href="", data-toggle="dropdown")
+							| Upload
+							b.caret
+						ul.dropdown-menu
+							li
+								a(href="/") Using angular-file-upload
+							li
+								a(href="/") Using angular-uploadcare
+							li
+								a(href="/") Using ng-flow
 				div(ng-include="'/partials/account/navbar-login'")
 
 	section.content
