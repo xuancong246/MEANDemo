@@ -1,4 +1,4 @@
-﻿angular.module('app', ['ngResource', 'ngRoute', 'ngSanitize', 'ngCsv']);
+﻿angular.module('app', ['ngResource', 'ngRoute', 'ngSanitize', 'ngCsv', 'flow']);
 
 angular.module('app').config(function($routeProvider, $locationProvider) {
     $locationProvider.html5Mode({
@@ -12,5 +12,6 @@ angular.module('app').config(function($routeProvider, $locationProvider) {
       when('/profile', {templateUrl: '/partials/account/profile', controller: 'mvProfileCtrl', controllerAs: 'vm'}).
       when('/admin/users', {templateUrl: '/partials/admin/user-list', controller: 'mvUserListCtrl', controllerAs: 'vm'}).
       when('/courses', {templateUrl: '/partials/course/course-list', controller: 'mvCourseListCtrl', controllerAs: 'vm'}).
-      when('/courses/:id', {templateUrl: '/partials/course/course-detail', controller: 'mvCourseDetailCtrl', controllerAs: 'vm'});
+      when('/courses/:id', {templateUrl: '/partials/course/course-detail', controller: 'mvCourseDetailCtrl', controllerAs: 'vm'}).
+      when('/upload/ng-flow', {templateUrl: '/partials/upload/ng-flow.jade', controller: 'mvNgFlowCtrl', controllerAs: 'vm'});
 });
