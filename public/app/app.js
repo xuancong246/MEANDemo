@@ -1,4 +1,4 @@
-﻿angular.module('app', ['ngResource', 'ngRoute', 'ngSanitize', 'ngCsv', 'ngGrid']);
+﻿angular.module('app', ['ngResource', 'ngRoute', 'ngSanitize', 'ngCsv', 'ngGrid', 'smart-table']);
 
 angular.module('app').config(function($routeProvider, $locationProvider) {
     $locationProvider.html5Mode({
