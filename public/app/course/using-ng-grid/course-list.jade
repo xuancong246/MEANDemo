@@ -1,0 +1,7 @@
+.container
+  form.form-horizontal
+    .form-group
+      label.col-md-1.control-label(for="filter") Filter:
+      input.col-md-3(name="filter", ng-model="filterOptions.filterText", placeholder="Filter by title")
+        
+  .gridStyle(ng-grid="gridOptions")

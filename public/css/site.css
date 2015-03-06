@@ -33,3 +33,8 @@ footer p {
 .toast-success {
   background-color: #13987e;
 }
+.gridStyle {
+  border: 1px solid #d4d4d4;
+  width: 100%;
+  height: 500px;
+}

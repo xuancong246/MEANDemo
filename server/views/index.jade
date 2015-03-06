@@ -1,15 +1,22 @@
 extends ../includes/layout
 
 block main-content
-	.navbar.navbar-inverse.navbar-fixed-top
+	.navbar.navbar-default.navbar-fixed-top
 		.container
 			.navbar-header
 				a.navbar-brand(href="/") Multivision
 					h6 -Extreme Tech Training
 			.navbar-collapse.collapse
 				ul.nav.navbar-nav
-					li
-						a(href="/courses") Courses
+					li.dropdown
+						a.dropdown-toggle(href="", data-toggle="dropdown")
+							| Courses
+							b.caret
+						ul.dropdown-menu
+							li
+								a(href="/courses") Courses (Normal)
+							li
+								a(href="/courses-ng-grid") Using ng-grid
 					li.dropdown
 						a.dropdown-toggle(href="", data-toggle="dropdown")
 							| Upload
