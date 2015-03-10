@@ -13,5 +13,6 @@ angular.module('app').config(function($routeProvider, $locationProvider) {
       when('/admin/users', {templateUrl: '/partials/admin/user-list', controller: 'mvUserListCtrl', controllerAs: 'vm'}).
       when('/courses', {templateUrl: '/partials/course/course-list', controller: 'mvCourseListCtrl', controllerAs: 'vm'}).
       when('/courses/:id', {templateUrl: '/partials/course/course-detail', controller: 'mvCourseDetailCtrl', controllerAs: 'vm'}).
-      when('/courses-ng-grid', {templateUrl: '/partials/course/using-ng-grid/course-list', controller: 'mvCourseListNgGridCtrl', controllerAs: 'vm'});
+      when('/courses-ng-grid', {templateUrl: '/partials/course/using-ng-grid/course-list', controller: 'mvCourseListNgGridCtrl', controllerAs: 'vm'}).
+      when('/courses-smart-table', {templateUrl: '/partials/course/using-smart-table/course-list-smart-table', controller: 'mvCourseListSmartTableCtrl', controllerAs: 'vm'});
 });
