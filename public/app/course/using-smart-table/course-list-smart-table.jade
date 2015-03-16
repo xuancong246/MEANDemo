@@ -1,0 +1,16 @@
+.container
+  table.table.table-striped(st-table="vm.model.courses")
+    thead
+      tr
+        th Title
+        th Published Date
+        th Featured
+    tbody
+      tr(ng-repeat="course in vm.model.courses")
+        td {{course.title}}
+        td {{course.published | standardDate}}
+        td {{course.featured | stickCross}}
+    tfoot
+      tr
+        td.text-center(colspan="3")
+          div(st-pagination="", st-items-by-page="10", st-displayed-pages="7")
