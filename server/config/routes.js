@@ -1,6 +1,7 @@
 var auth = require('./auth'),
   users = require('./../controllers/users'),
-  courses = require('./../controllers/courses');
+  courses = require('./../controllers/courses'),
+  apisTesting = require('./../controllers/apisTesting');
 
 module.exports = function(app, config) {
   app.get('/api/users', auth.requiresRole('admin'), users.getUsers);
@@ -9,6 +10,9 @@ module.exports = function(app, config) {
 
   app.get('/api/courses', courses.getCourses);
   app.get('/api/courses/:id', courses.getCourseById);
+
+  // Group: api for testing iSolution
+  app.get('/api/scenario', apisTesting.getScenarios);
 
   app.all('/api/*', function(req, res) {
     res.send(404);
